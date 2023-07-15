@@ -40,6 +40,7 @@ Brief information about the product, price of the product, release the picture o
 	КонецЕсли; 
 	РезультатЗапроса = Запрос.Выполнить();
 	СтруктураОтвета = ПолучитьСтруктуруОтвета();
+ 
 	Если РезультатЗапроса.Пустой() Тогда
 		Возврат СформироватьОтвет(СтруктураОтвета, 204);
 	КонецЕсли; 
@@ -79,6 +80,8 @@ Brief information about the product, price of the product, release the picture o
     СтрокаBase64 = СтрЗаменить(СтрокаBase64, Символы.ВК, "");
     Возврат СтрШаблон("data:image/jpg;base64, %1", СтрокаBase64);
 КонецФункции;
+
+//--//
 
 
 
